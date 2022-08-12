@@ -17,14 +17,34 @@
     font-size: 2rem;
     color: yellow;
 }
-#contenedor{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    width: 500px;
-    color: gold;
-    border: 1px solid black;
+.conteiner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    font-size: 1rem;
+}
+.conteiner #contenedor{
     display: flex;
     justify-content: center;
-    margin-left: 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: gold;
+    border: 3px solid black;
+}
+.conteiner #conteiner2{
+    display: flex;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: gold;
+    border: 3px solid black;
+}
+#listaBedidas, #listaGalletitas{
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    border: 1px solid black;
+}
+#bebidas, #galletitas{
+    margin: 5rem;
 }
 footer{
     color: #ccc;

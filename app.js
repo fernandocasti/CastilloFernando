@@ -59,11 +59,27 @@ const vinos = [
         {id: 6, precio: 900, marca: "1890", ml: 1000},
         
         ]
+        let agregarBebidas = document.getElementById("bebidas");
+        let bebidas = ["CERVEZAS", "FERNET", "VINOS", "VODKA", "GASEOSAS"]
+        let agregarGalletitas =  document.getElementById("galletitas");
+        let galletitas = ["OREOS", "MELBA", "9 DE ORO", "PITUSAS", "DON SATUR"]
+        
+        for(const bebida of bebidas){
+            let lista = document.createElement("li");
+            lista.innerHTML = bebida;
+            agregarBebidas.appendChild(lista);
+        }
+        
+        for(const galletita of galletitas){
+            let listas = document.createElement("li");
+            listas.innerText = galletita;
+            agregarGalletitas.appendChild(listas);
+        }
+        
         
         
         const nombre = prompt("ingresa tu nombre")
-        let bebida = prompt(nombre +" ingrese la bebida que desee")
-        
+        let bebida = prompt(nombre +" ingrese la bebida que desee de la siguiente lista: 1 cerveza, 2 vinos, 3 vodka, 4 fernet")
         
         function buscar (){
         if(bebida.toUpperCase() == ("FERNET")){
@@ -90,6 +106,8 @@ const vinos = [
             console.log("no tenemos esa lista disponible")
         }
     }
-    console.log(buscar());
+    
+    
+console.log(buscar());
         
        

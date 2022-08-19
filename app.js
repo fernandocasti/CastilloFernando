@@ -1,7 +1,7 @@
 
 const cervezas = [
 
-    {id: 1, precio: 100, marca: "BRAMA", ml: 1000},
+    {id: 1, precio: 100, marca: "BRAHAMA", ml: 1000},
     
     {id: 2, precio: 170, marca: "QUILMES", ml: 1000},
     
@@ -11,7 +11,6 @@ const cervezas = [
     
     {id: 5, precio: 180, marca: "SANTA FE", ml: 1000},
     
-    {id: 6, precio: 300, marca: "PATAGONIA", ml: 1000},
     
     ]
 const vinos = [
@@ -59,6 +58,109 @@ const vinos = [
         {id: 6, precio: 900, marca: "1890", ml: 1000},
         
         ]
+        
+        let contadorCarrito = 0;
+        const carrito = [];
+        
+        
+        const productosCatalogo = (id) => {
+            return `
+                    <div class="col-2">
+                        <div class="card">
+                        <img src="https://loremflickr.com/80/80/${id.marca}" class="card-img-top" alt="API">
+                            <div class="card-body">
+                              <h5 class="card-title">${id.marca}</h5>
+                              <p class="card-text">precio: $ ${id.precio}: </p>
+                              <button id ="btn-${id.marca}-${id.id}" class="btn btn-primary">comprar</button>
+                             </div>
+                        </div>
+                    </div>`;
+        };
+    
+        const productosCarritos = (id) =>{
+            return `
+                    <div class="col-3">
+                        <div class="card">
+                        <img src="https://loremflickr.com/80/80/${id.marca}" class="card-img-top" alt="API">
+                            <div class="card-body">
+                              <h5 id="listadoBebidas" class="card-title">${id.marca}</h5>
+                              <p class="card-text">precio: $ ${id.precio} </p>
+                              <button id ="btn-delete-${id.idcompra}" class="btn btn-danger">Quitar</button>
+                            </div>
+                        </div>
+                    </div>`;
+        };
+      
+        
+        
+        const mostrarListadoCervezas = () => {
+            const cervezasNodo = document.getElementById("catalogoCervezas");
+            let cervezashtml = "";
+            
+            for(const id of cervezas){
+                cervezashtml += productosCatalogo(id);
+            }
+            
+            cervezasNodo.innerHTML = cervezashtml;
+            
+            botonCatalogoCervezas();
+
+            
+        };
+        
+        const mostrarCarritos = () => {
+            const carritoNodo = document.getElementById("carrito");
+            let carritoHtml = "";
+            
+            for(const id of carrito){
+                carritoHtml += productosCarritos(id);
+                
+            }
+            carritoNodo.innerHTML = carritoHtml;
+            botonesCarritos();
+        };
+        const botonesCarritos = () => {
+            for(const id of carrito){
+                const idboton = `btn-delete-${id.idcompra}`;
+                const nodoboton = document.getElementById(idboton);
+                console.log(id);
+                console.log(idboton);
+                console.log(nodoboton);
+                
+                nodoboton.addEventListener("click", () => {
+                    const index = carrito.findIndex((p) => p.idcompra == id.idcompra);
+                    carrito.splice(index, 1);
+                    mostrarCarritos();
+                })
+                
+            }
+        };
+        const botonCatalogoCervezas = () => {
+        
+            for(const id of cervezas){
+                const botonid = `btn-${id.marca}-${id.id}`
+                const nodoBoton = document.getElementById(botonid);
+                
+                nodoBoton.addEventListener ("click", () => {
+                    const productoCarrito = {
+                        marca: id.marca,
+                        idcompra: contadorCarrito,
+                    };
+                    
+                    contadorCarrito += 1;
+                    carrito.push(productoCarrito);
+                    mostrarCarritos();
+                });
+            }
+        };
+        
+       
+        
+        mostrarListadoCervezas();
+        
+        /* ESTE CODIGO ES PARA USARLO EN EL PROYECTO FINAL
+        
+        
         let agregarBebidas = document.getElementById("bebidas");
         let bebidas = ["CERVEZAS", "FERNET", "VINOS", "VODKA", "GASEOSAS"]
         let agregarGalletitas =  document.getElementById("galletitas");
@@ -76,13 +178,22 @@ const vinos = [
             agregarGalletitas.appendChild(listas);
         }
         
+        let Formularios = document.getElementById("formulario");
+        Formularios.addEventListener("click", validar);
         
-        
+        function validar (e){
+        e.preventDefault();
+        let form = e.target;
+        console.log(e);
+        console.log(Formularios);
+        console.log(form);
+        }
+        console.log("hola");
         const nombre = prompt("ingresa tu nombre")
         let bebida = prompt(nombre +" ingrese la bebida que desee de la siguiente lista: 1 cerveza, 2 vinos, 3 vodka, 4 fernet")
         
         function buscar (){
-        if(bebida.toUpperCase() == ("FERNET")){
+        if(bebida.toUpperCase() == "FERNET"){
             console.log("esta es nuestra lista de " +bebida +":")
             for(const id of fernet){
                 console.log(id.marca +" $" +id.precio  +" " +id.ml +"ml")
@@ -108,6 +219,6 @@ const vinos = [
     }
     
     
-console.log(buscar());
+console.log(buscar());*/
         
        

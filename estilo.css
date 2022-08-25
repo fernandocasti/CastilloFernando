@@ -1,6 +1,18 @@
 *{
-    background-color: rgb(77, 77, 77);
+    background-color: rgb(255, 255, 255);
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.rojo{
+    background-color: red;
+}
+.azul{
+    background-color: blue;
+}
+.verde{
+    background-color: green;
+}
+.negro{
+    background-color: black;
 }
 #encabezado{
     display: flex;
@@ -11,31 +23,20 @@
 }
 #encabezado .caja h1{
     font-size: 5rem;
-    color: whitesmoke;
+    color: rgb(5, 5, 5);
 }
 #encabezado .caja p{
     font-size: 2rem;
-    color: yellow;
+    color: rgb(16, 3, 199);
 }
-.conteiner{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    font-size: 1rem;
-}
-.conteiner #contenedor{
+#inicio{
     display: flex;
     justify-content: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: gold;
-    border: 3px solid black;
 }
-.conteiner #conteiner2{
-    display: flex;
-    justify-content: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: gold;
-    border: 3px solid black;
+#inicio #formulario{
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
 }
 #listaBedidas, #listaGalletitas{
     display: flex;

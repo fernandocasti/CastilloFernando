@@ -90,9 +90,7 @@ const vinos = [
                         </div>
                     </div>`;
         };
-      
-        
-        
+                  
         const mostrarListadoCervezas = () => {
             const cervezasNodo = document.getElementById("catalogoCervezas");
             let cervezashtml = "";
@@ -153,10 +151,13 @@ const vinos = [
                 });
             }
         };
-        
-       
-        
         mostrarListadoCervezas();
+       
+           
+            
+            
+        
+        
         
         /* ESTE CODIGO ES PARA USARLO EN EL PROYECTO FINAL
         
@@ -216,9 +217,4 @@ const vinos = [
         }else{
             console.log("no tenemos esa lista disponible")
         }
-    }
-    
-    
-console.log(buscar());*/
-        
-       
+    }*/

@@ -2,18 +2,6 @@
     background-color: rgb(255, 255, 255);
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.rojo{
-    background-color: red;
-}
-.azul{
-    background-color: blue;
-}
-.verde{
-    background-color: green;
-}
-.negro{
-    background-color: black;
-}
 #encabezado{
     display: flex;
     justify-content: center;

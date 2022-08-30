@@ -45,3 +45,10 @@ footer{
     bottom: 10px;
     right: 10px;;
 }
+#hora{
+    position: relative;
+    top: 1rem;
+    left: 75rem;
+    color: blue;
+    width: 6rem;
+}

@@ -48,7 +48,9 @@ footer{
 #hora{
     position: relative;
     top: 1rem;
-    left: 75rem;
+    left: 70rem;
     color: blue;
     width: 6rem;
+    font-size: 2rem;
+    border-radius: 1px;
 }

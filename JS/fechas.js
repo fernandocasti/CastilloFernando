@@ -1,3 +1,4 @@
 const dateTiempo =  luxon.DateTime;
 const hora = document.querySelector("#hora");
-hora.innerHTML = dateTiempo.now().toLocaleString();
+let fecha = dateTiempo.now().toLocaleString();
+hora.innerHTML = fecha;

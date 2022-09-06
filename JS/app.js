@@ -84,7 +84,7 @@ const vinos = [
                         <img src="https://loremflickr.com/80/80/${id.marca}" class="card-img-top" alt="API">
                             <div class="card-body">
                               <h5 id="listadoBebidas" class="card-title">${id.marca}</h5>
-                              <p class="card-text">${id.precio} </p>
+                              <p class="card-text">${id.precio}</p>
                               <button id ="btn-delete-${id.idcompra}" class="btn btn-danger">Quitar</button>
                             </div>
                         </div>

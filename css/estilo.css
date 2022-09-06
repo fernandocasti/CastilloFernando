@@ -28,9 +28,24 @@
 }
 #listaBedidas, #listaGalletitas{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     margin: 2rem;
     border: 1px solid black;
+}
+#catalogoVinos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    margin: 20px;
+    padding: 20px;
+}
+#catalogoVinos h4{
+    color:blue;
+}
+#catalogoVinos p{
+    color: #0c0d05;
 }
 #bebidas, #galletitas{
     margin: 5rem;
